@@ -1,0 +1,65 @@
+@use '../../abstracts' as *;
+// card-success
+.card-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  transition-duration: 500ms;
+  border: 2px solid $success;
+  border-radius: 0.25rem;
+  box-shadow: darken($success, 20%) 0px 0px 10px;
+}
+
+.card-success:hover {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion) {
+  .card-success:hover {
+    transform: none;
+  }
+}
+
+.card-title-success {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: $success;
+}
+
+.card-description-success {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: $success;
+}
+
+.card-documentation-success {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+  text-decoration-style: dotted;
+  -webkit-text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  color: $success;
+}
+.card-link-success {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+  text-decoration-style: dotted;
+  -webkit-text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  color: $success;
+  &:hover {
+    color: lighten($success, 10%);
+    text-shadow: lighten($success, 10%) 0px 0px 10px;
+  }
+}
+// card-success-end
