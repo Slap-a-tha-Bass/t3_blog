@@ -30,8 +30,8 @@ export default function BlogCard({
     <div>
       {isLink ? (
         <div className={`card-${variant}`}>
-          <h2 className={`card-title-${variant}`}>{name}</h2>
-          <p className={`card-description-${variant}`}>{description}</p>
+          <h3>{name}</h3>
+          <p>{description}</p>
           {link && (
             <Link
               href={`/${
@@ -40,14 +40,14 @@ export default function BlogCard({
                   : ''
               }/${link.split(' ').join('-').toLocaleLowerCase()}`}
             >
-              <a className={`card-link-${variant}`}>{link}</a>
+              <a>{link}</a>
             </Link>
           )}
         </div>
       ) : (
         <div className={`card-${variant}`}>
-          <h2 className={`card-title-${variant}`}>{name}</h2>
-          <p className={`card-description-${variant}`}>{description}</p>
+          <h3>{name}</h3>
+          <p>{description}</p>
         </div>
       )}
     </div>

@@ -2,6 +2,7 @@ import BlogCard from '@components/blogCard';
 import type { NextPage } from 'next';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { trpc } from '../utils/trpc';
 
 const Home: NextPage = () => {
@@ -90,6 +91,11 @@ const Home: NextPage = () => {
           {data ? <p>{data.greeting}</p> : <p>Loading...</p>}
         </div>
         <AuthShowcase />
+        <div className="card-gradient-primary">
+          <h3>Testcard</h3>
+          <p>Testcard text</p>
+          <Link href="/">Testcard Link</Link>
+        </div>
       </div>
     </>
   );

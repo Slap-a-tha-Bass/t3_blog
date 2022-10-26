@@ -1,66 +1,7 @@
-@use '../../abstracts/' as *;
+@use '../../abstracts' as *;
+@use '../../mixins' as *;
 
-// card-secondary
 .card-secondary {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1.5rem;
-  transition-duration: 500ms;
-  border: 2px solid $secondary;
-  border-radius: 0.25rem;
-  box-shadow: darken($secondary, 20%) 0px 0px 10px;
+  // card($bg-color, $text-color, $border-color)
+  @include card($transparent, $secondary, $secondary);
 }
-
-.card-secondary:hover {
-  transform: scale(1.05);
-}
-
-@media (prefers-reduced-motion) {
-  .card-secondary:hover {
-    transform: none;
-  }
-}
-
-.card-title-secondary {
-  margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 400;
-  color: $secondary;
-}
-
-.card-description-secondary {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: $secondary;
-}
-
-.card-documentation-secondary {
-  margin-top: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  text-decoration-line: underline;
-  -webkit-text-decoration-line: underline;
-  text-decoration-style: dotted;
-  -webkit-text-decoration-style: dotted;
-  text-underline-offset: 2px;
-  color: $secondary;
-}
-.card-link-secondary {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  text-decoration-line: underline;
-  -webkit-text-decoration-line: underline;
-  text-decoration-style: dotted;
-  -webkit-text-decoration-style: dotted;
-  text-underline-offset: 2px;
-  color: $secondary;
-  &:hover {
-    color: lighten($secondary, 10%);
-    text-shadow: lighten($secondary, 10%) 0px 0px 10px;
-  }
-}
-// card-secondary-end
