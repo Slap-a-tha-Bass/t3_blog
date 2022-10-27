@@ -85,6 +85,7 @@ const Home: NextPage = () => {
             link="Fast Pace Life"
             urlSegment="travel"
           />
+          <BlogCard name="Name" description="Description" variant="danger" />
         </div>
         <div className="">
           {data ? <p>{data.greeting}</p> : <p>Loading...</p>}
