@@ -48,3 +48,7 @@
     }
   }
 }
+@mixin gradient-card($bg-color, $text-color, $border-color, $deg) {
+  @include card($bg-color, $text-color, $border-color);
+  background: linear-gradient($deg, $bg-color, darken($bg-color, 20%));
+}

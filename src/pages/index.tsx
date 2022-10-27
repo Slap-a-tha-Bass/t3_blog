@@ -2,7 +2,6 @@ import BlogCard from '@components/blogCard';
 import type { NextPage } from 'next';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Head from 'next/head';
-import Link from 'next/link';
 import { trpc } from '../utils/trpc';
 
 const Home: NextPage = () => {
@@ -91,11 +90,6 @@ const Home: NextPage = () => {
           {data ? <p>{data.greeting}</p> : <p>Loading...</p>}
         </div>
         <AuthShowcase />
-        <div className="card-gradient-primary">
-          <h3>Testcard</h3>
-          <p>Testcard text</p>
-          <Link href="/">Testcard Link</Link>
-        </div>
       </div>
     </>
   );
@@ -113,11 +107,15 @@ const AuthShowcase: React.FC = () => {
       {sessionData && <p>Logged in as {sessionData?.user?.name}</p>}
       {secretMessage && <p>{secretMessage}</p>}
       <button
-        className=""
+        className="btn-primary"
         onClick={sessionData ? () => signOut() : () => signIn()}
       >
         {sessionData ? 'Sign out' : 'Sign in'}
       </button>
+      <button className="btn-primary-gradient">Gradient Button</button>
+      <div className="card-gradient-primary">
+        <h2>Gradient Card</h2>
+      </div>
     </div>
   );
 };
